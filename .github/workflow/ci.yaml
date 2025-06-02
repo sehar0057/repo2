@@ -1,0 +1,17 @@
+name: ci-wf
+on: 
+  pull_request:
+    branches:
+      - develop 
+    types:
+      - opened
+      - syncronize
+  push:
+    branches:
+      - develop
+    jobs:
+      litting-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Welcome steps
+            run: echo "Welcome ti CI pipelines for this repo"
