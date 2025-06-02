@@ -15,3 +15,10 @@ on:
         steps:
           - name: Welcome steps
             run: echo "Welcome ti CI pipelines for this repo"
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+          - name: List HTML Files
+            run: npx htmlhint "**/* .html"
+          - name: List CSS Fiiles
+            run: npx stylelint "**/* .css"
+            
